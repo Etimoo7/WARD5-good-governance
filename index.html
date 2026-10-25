@@ -1,1 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#075c3b">
+<title>Arise for Good Governance | Ward 5</title>
 
+<style>
+:root {
+  --green: #075c3b;
+  --light-green: #eaf7ef;
+  --purple: #602c91;
+  --gold: #e8c84a;
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5faf6;
+  color: #173c2b;
+  line-height: 1.6;
+}
+
+header {
+  background: linear-gradient(135deg, #075c3b, #13834d);
+  color: white;
+  padding: 20px;
+  border-bottom: 5px solid var(--gold);
+}
+
+.header-content {
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.ward-logo {
+  width: 75px;
+  height: 75px;
+  border: 3px solid var(--gold);
+  border-radius: 50%;
+  background: white;
+  color: var(--green);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: bold;
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+.brand h1 {
+  margin: 0;
+  font-size: 25px;
+  line-height: 1.2;
+}
+
+.brand p {
+  margin-bottom: 0;
+  font-size: 13px;
+}
+
+.flag {
+  display: flex;
+  width: 60px;
+  height: 36px;
+  margin-left: auto;
+  border: 1px solid white;
+  flex-shrink: 0;
+}
+
+.flag span {
+  flex: 1;
+}
+
+.flag span:first-child,
+.flag span:last-child {
+  background: #168b45;
+}
+
+.flag span:nth-child(2) {
+  background: white;
+}
+
+.hero {
+  max-width: 1000px;
+  margin: 35px auto;
+  padding: 10px 20px 25px;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: clamp(32px, 6vw, 52px);
+  line-height: 1.15;
+  margin-bottom: 15px;
+}
+
+.hero h2 span {
+  color: var(--gold);
+}
+
+.hero p {
+  max-width: 650px;
+  margin: 0 auto 25px;
+}
+
+.button {
+  display: inline-block;
+  padding: 13px 20px;
+  margin: 5px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.button-gold {
+  background: var(--gold);
+  color: #173c2b;
+}
+
+.button-white {
+  background: white;
+  color: var(--green);
+}
+
+main {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 0 16px;
+}
+
+.section-title {
+  color: var(--green);
+  font-size: 27px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.card {
+  background: white;
+  border: 1px solid #d7e9dc;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 15px #00000008;
+}
+
+.card h3 {
+  color: var(--green);
+  margin-top: 0;
+}
+
+.card p {
+  color: #52685b;
+}
+
+.card a {
+  color: var(--purple);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.card a:hover {
+  text-decoration: underline;
+}
+
+.notice {
+  margin: 25px 0;
+  padding: 16px;
+  background: #fff8dc;
+  border-left: 5px solid var(--gold);
+  border-radius: 8px;
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.step {
+  background: var(--light-green);
+  padding: 18px;
+  border-radius: 12px;
+}
+
+.step strong {
+  color: var(--green);
+  display: block;
+}
+
+footer {
+  background: #063d2a;
+  color: white;
+  text-align: center;
+  padding: 30px 15px;
+  margin-top: 40px;
+}
+
+footer strong {
+  color: var(--gold);
+}
+
+@media (max-width: 700px) {
+  .header-content {
+    flex-wrap: wrap;
+  }
+
+  .brand {
+    flex: 1;
+  }
+
+  .brand h1 {
+    font-size: 20px;
+  }
+
+  .flag {
+    margin-left: 0;
+  }
+
+  .cards,
+  .steps {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="header-content">
+
+    <div class="ward-logo">
+      WARD 5
+      <span>CALABAR</span>
+    </div>
+
+    <div class="brand">
+      <h1>ARISE FOR GOOD GOVERNANCE</h1>
+      <p>Campaign and Election Support Group</p>
+      <p>Ward 5, Calabar Municipality, Cross River State</p>
+    </div>
+
+    <div class="flag" aria-label="Nigerian flag">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+  </div>
+
+  <div class="hero">
+    <h2>Together for a <span>Better Ward 5</span></h2>
+
+    <p>
+      Welcome to our community platform. Register voluntarily,
+      share constructive ideas, receive announcements and
+      participate in peaceful civic activities.
+    </p>
+
+    <a class="button button-gold"
+       href="https://docs.google.com/forms/d/e/1FAIpQLSduGTTJPYvk8HDVWShqNGsQj6GrOPFKAj3eR4uK2KRLDFvQUA/viewform?usp=header"
+       target="_blank" rel="noopener">
+       REGISTER AS A MEMBER
+    </a>
+
+    <a class="button button-white" href="#activities">
+      EXPLORE THE PLATFORM
+    </a>
+  </div>
+</header>
+
+<main>
+
+  <h2 class="section-title" id="activities">
+    Welcome to Ward 5
+  </h2>
+
+  <div class="cards">
+
+    <div class="card">
+      <h3>Membership Registration</h3>
+      <p>
+        Join our community platform by completing the
+        existing Ward 5 registration form.
+      </p>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSduGTTJPYvk8HDVWShqNGsQj6GrOPFKAj3eR4uK2KRLDFvQUA/viewform?usp=header"
+         target="_blank" rel="noopener">
+        Open Registration Form →
+      </a>
+    </div>
+
+    <div class="card">
+      <h3>Community Ideas Box</h3>
+      <p>
+        Share practical suggestions concerning roads,
+        sanitation, education, healthcare, youth skills
+        and other community priorities.
+      </p>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSduGTTJPYvk8HDVWShqNGsQj6GrOPFKAj3eR4uK2KRLDFvQUA/viewform?usp=header"
+         target="_blank" rel="noopener">
+        Share Your Ideas →
+      </a>
+    </div>
+
+    <div class="card">
+      <h3>Membership Records</h3>
+      <p>
+        Member records must remain accessible only to
+        authorised administrators. Do not publish
+        personal information publicly.
+      </p>
+      <a href="https://docs.google.com/spreadsheets/d/1ALmDTK8_1Q4_1WoQH7qlkeAOJP-MEgxtPT9QGWUPpM4/edit?usp=drivesdk"
+         target="_blank" rel="noopener">
+        Open Ward 5 Spreadsheet →
+      </a>
+    </div>
+
+    <div class="card">
+      <h3>Announcements</h3>
+      <p>
+        Find verified meeting notices, community activities
+        and important updates published by authorised
+        Ward 5 administrators.
+      </p>
+      <a href="#announcements">View Announcements →</a>
+    </div>
+
+    <div class="card">
+      <h3>Good Governance Challenge</h3>
+      <p>
+        Participate in constructive activities that
+        encourage accountability, community service
+        and peaceful civic engagement.
+      </p>
+      <a href="#challenge">Learn How to Participate →</a>
+    </div>
+
+    <div class="card">
+      <h3>Ward 5 Dashboard</h3>
+      <p>
+        View verified community progress summaries.
+        Live membership statistics will be added
+        after the dashboard is connected.
+      </p>
+      <a href="#dashboard">View Dashboard Information →</a>
+    </div>
+
+  </div>
+
+  <div class="notice">
+    <strong>Privacy and safety:</strong>
+    Registration is voluntary. Personal details should
+    be handled responsibly. Only authorised administrators
+    should access the membership spreadsheet.
+  </div>
+
+  <section id="challenge">
+    <h2 class="section-title">How to Participate</h2>
+
+    <div class="steps">
+      <div class="step">
+        <strong>1. Register</strong>
+        Complete the official Ward 5 registration form
+        and check your details before submitting.
+      </div>
+
+      <div class="step
