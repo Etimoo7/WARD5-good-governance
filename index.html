@@ -2,23 +2,21 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#075c3b">
+<meta name="description" content="Arise for Good Governance, Ward 5, Calabar Municipality, Cross River State.">
 <title>Arise for Good Governance | Ward 5</title>
 
 <style>
 :root {
   --green: #075c3b;
-  --light-green: #eaf7ef;
-  --purple: #602c91;
+  --dark: #063d2a;
   --gold: #e8c84a;
+  --light: #eaf7ef;
   --white: #ffffff;
 }
-
-* {
-  box-sizing: border-box;
-}
-
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -26,23 +24,20 @@ body {
   color: #173c2b;
   line-height: 1.6;
 }
-
 header {
-  background: linear-gradient(135deg, #075c3b, #13834d);
+  background: linear-gradient(135deg, #063d2a, #13834d);
   color: white;
-  padding: 20px;
   border-bottom: 5px solid var(--gold);
 }
-
-.header-content {
-  max-width: 1000px;
+.top {
+  max-width: 1100px;
   margin: auto;
+  padding: 18px;
   display: flex;
   align-items: center;
   gap: 15px;
 }
-
-.ward-logo {
+.logo {
   width: 75px;
   height: 75px;
   border: 3px solid var(--gold);
@@ -51,334 +46,312 @@ header {
   color: var(--green);
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  text-align: center;
+  justify-content: center;
   font-weight: bold;
-  font-size: 12px;
   flex-shrink: 0;
 }
-
-.brand h1 {
-  margin: 0;
-  font-size: 25px;
-  line-height: 1.2;
-}
-
-.brand p {
-  margin-bottom: 0;
-  font-size: 13px;
-}
-
+.brand { flex: 1; }
+.brand h1 { font-size: 24px; line-height: 1.2; margin: 0; }
+.brand p { font-size: 13px; margin: 5px 0 0; }
 .flag {
   display: flex;
-  width: 60px;
-  height: 36px;
-  margin-left: auto;
-  border: 1px solid white;
+  width: 55px;
+  height: 35px;
   flex-shrink: 0;
 }
-
-.flag span {
-  flex: 1;
-}
-
-.flag span:first-child,
-.flag span:last-child {
-  background: #168b45;
-}
-
-.flag span:nth-child(2) {
-  background: white;
-}
+.flag span { flex: 1; }
+.flag span:first-child, .flag span:last-child { background: #168b45; }
+.flag span:nth-child(2) { background: white; }
 
 .hero {
-  max-width: 1000px;
-  margin: 35px auto;
-  padding: 10px 20px 25px;
   text-align: center;
+  padding: 40px 18px 50px;
+  max-width: 950px;
+  margin: auto;
 }
-
 .hero h2 {
-  font-size: clamp(32px, 6vw, 52px);
+  font-size: clamp(34px, 6vw, 55px);
   line-height: 1.15;
-  margin-bottom: 15px;
+  margin: 15px 0;
 }
-
-.hero h2 span {
-  color: var(--gold);
-}
-
-.hero p {
-  max-width: 650px;
-  margin: 0 auto 25px;
-}
-
+.hero h2 span { color: var(--gold); }
+.hero p { max-width: 700px; margin: 0 auto 22px; }
 .button {
   display: inline-block;
-  padding: 13px 20px;
+  padding: 12px 20px;
   margin: 5px;
   border-radius: 30px;
   text-decoration: none;
   font-weight: bold;
 }
+.gold { background: var(--gold); color: #173c2b; }
+.white { background: white; color: var(--green); }
 
-.button-gold {
-  background: var(--gold);
-  color: #173c2b;
-}
-
-.button-white {
-  background: white;
-  color: var(--green);
-}
-
-main {
-  max-width: 1000px;
-  margin: 30px auto;
-  padding: 0 16px;
-}
-
-.section-title {
-  color: var(--green);
-  font-size: 27px;
+main { max-width: 1100px; margin: 35px auto; padding: 0 18px; }
+.title {
   text-align: center;
-  margin-bottom: 20px;
+  color: var(--green);
+  font-size: 29px;
+  margin-bottom: 8px;
 }
-
+.intro {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 25px;
+  color: #52685b;
+}
 .cards {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 16px;
 }
-
 .card {
+  background: white;
+  padding: 20px;
+  border: 1px solid #d7e9dc;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px #00000008;
+}
+.card h3 { color: var(--green); margin-top: 0; }
+.card p { color: #52685b; }
+.card a { color: #602c91; font-weight: bold; text-decoration: none; }
+.card a:hover { text-decoration: underline; }
+
+.panel {
   background: white;
   border: 1px solid #d7e9dc;
   border-radius: 15px;
-  padding: 20px;
-  box-shadow: 0 4px 15px #00000008;
+  padding: 22px;
+  margin: 28px 0;
 }
-
-.card h3 {
-  color: var(--green);
-  margin-top: 0;
-}
-
-.card p {
-  color: #52685b;
-}
-
-.card a {
-  color: var(--purple);
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.card a:hover {
-  text-decoration: underline;
-}
-
+.panel h2 { color: var(--green); margin-top: 0; }
 .notice {
-  margin: 25px 0;
-  padding: 16px;
   background: #fff8dc;
   border-left: 5px solid var(--gold);
   border-radius: 8px;
+  padding: 16px;
+  margin: 25px 0;
 }
-
 .steps {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 15px;
 }
-
-.step {
-  background: var(--light-green);
-  padding: 18px;
+.step { background: var(--light); padding: 17px; border-radius: 10px; }
+.step strong { display: block; color: var(--green); }
+.portrait {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+.portrait img {
+  width: 150px;
+  max-width: 100%;
   border-radius: 12px;
+  border: 3px solid var(--gold);
 }
-
-.step strong {
-  color: var(--green);
-  display: block;
+.party-logo {
+  width: 150px;
+  max-width: 100%;
+  height: auto;
 }
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+.stat {
+  background: var(--light);
+  padding: 16px;
+  border-radius: 10px;
+  text-align: center;
+}
+.stat strong { display: block; color: var(--green); }
 
 footer {
-  background: #063d2a;
+  background: var(--dark);
   color: white;
   text-align: center;
-  padding: 30px 15px;
+  padding: 28px 15px;
   margin-top: 40px;
 }
+footer strong { color: var(--gold); }
 
-footer strong {
-  color: var(--gold);
-}
-
-@media (max-width: 700px) {
-  .header-content {
-    flex-wrap: wrap;
-  }
-
-  .brand {
-    flex: 1;
-  }
-
-  .brand h1 {
-    font-size: 20px;
-  }
-
-  .flag {
-    margin-left: 0;
-  }
-
-  .cards,
-  .steps {
-    grid-template-columns: 1fr;
-  }
+@media (max-width: 750px) {
+  .cards, .steps { grid-template-columns: 1fr; }
+  .stats { grid-template-columns: 1fr; }
+  .brand h1 { font-size: 19px; }
 }
 </style>
 </head>
 
 <body>
-
 <header>
-  <div class="header-content">
-
-    <div class="ward-logo">
-      WARD 5
-      <span>CALABAR</span>
-    </div>
-
+  <div class="top">
+    <div class="logo">WARD 5<small>CALABAR</small></div>
     <div class="brand">
       <h1>ARISE FOR GOOD GOVERNANCE</h1>
       <p>Campaign and Election Support Group</p>
       <p>Ward 5, Calabar Municipality, Cross River State</p>
     </div>
-
-    <div class="flag" aria-label="Nigerian flag">
-      <span></span>
-      <span></span>
-      <span></span>
+    <div class="flag" role="img" aria-label="Nigerian flag">
+      <span></span><span></span><span></span>
     </div>
-
   </div>
 
   <div class="hero">
+    <p>COMMUNITY • SERVICE • ACCOUNTABILITY</p>
     <h2>Together for a <span>Better Ward 5</span></h2>
-
     <p>
       Welcome to our community platform. Register voluntarily,
-      share constructive ideas, receive announcements and
+      share constructive ideas, follow announcements and
       participate in peaceful civic activities.
     </p>
-
-    <a class="button button-gold"
+    <a class="button gold"
        href="https://docs.google.com/forms/d/e/1FAIpQLSduGTTJPYvk8HDVWShqNGsQj6GrOPFKAj3eR4uK2KRLDFvQUA/viewform?usp=header"
-       target="_blank" rel="noopener">
+       target="_blank" rel="noopener noreferrer">
        REGISTER AS A MEMBER
     </a>
-
-    <a class="button button-white" href="#activities">
-      EXPLORE THE PLATFORM
-    </a>
+    <a class="button white" href="#activities">EXPLORE THE WEBSITE</a>
   </div>
 </header>
 
 <main>
+  <section id="activities">
+    <h2 class="title">Welcome to Ward 5</h2>
+    <p class="intro">
+      A community platform for constructive participation,
+      responsible communication and good governance.
+    </p>
 
-  <h2 class="section-title" id="activities">
-    Welcome to Ward 5
-  </h2>
+    <div class="cards">
+      <article class="card">
+        <h3>📝 Membership Registration</h3>
+        <p>Register using the existing Ward 5 membership form.</p>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSduGTTJPYvk8HDVWShqNGsQj6GrOPFKAj3eR4uK2KRLDFvQUA/viewform?usp=header"
+           target="_blank" rel="noopener noreferrer">
+          Open Registration Form →
+        </a>
+      </article>
 
-  <div class="cards">
+      <article class="card">
+        <h3>💡 Community Ideas Box</h3>
+        <p>Share suggestions on sanitation, roads, education,
+           healthcare, youth skills and community priorities.</p>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSduGTTJPYvk8HDVWShqNGsQj6GrOPFKAj3eR4uK2KRLDFvQUA/viewform?usp=header"
+           target="_blank" rel="noopener noreferrer">
+          Open Form →
+        </a>
+        <p><small>A separate suggestions form can be connected later.</small></p>
+      </article>
 
-    <div class="card">
-      <h3>Membership Registration</h3>
-      <p>
-        Join our community platform by completing the
-        existing Ward 5 registration form.
-      </p>
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSduGTTJPYvk8HDVWShqNGsQj6GrOPFKAj3eR4uK2KRLDFvQUA/viewform?usp=header"
-         target="_blank" rel="noopener">
-        Open Registration Form →
-      </a>
+      <article class="card">
+        <h3>📣 Announcements</h3>
+        <p>Check this section for verified meeting notices and
+           community updates confirmed by the coordinators.</p>
+        <a href="#announcements">View Announcements →</a>
+      </article>
+
+      <article class="card">
+        <h3>🤝 Community Participation</h3>
+        <p>Support respectful dialogue, accountability and
+           peaceful civic engagement.</p>
+        <a href="#participate">How to Participate →</a>
+      </article>
+
+      <article class="card">
+        <h3>📊 Ward 5 Dashboard</h3>
+        <p>A space for verified progress information.
+           Live membership statistics are not yet connected.</p>
+        <a href="#dashboard">View Dashboard →</a>
+      </article>
+
+      <article class="card">
+        <h3>🔐 Privacy Protection</h3>
+        <p>Personal membership records are restricted to
+           authorised administrators.</p>
+        <a href="#privacy">Read Privacy Notice →</a>
+      </article>
     </div>
+  </section>
 
-    <div class="card">
-      <h3>Community Ideas Box</h3>
-      <p>
-        Share practical suggestions concerning roads,
-        sanitation, education, healthcare, youth skills
-        and other community priorities.
-      </p>
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSduGTTJPYvk8HDVWShqNGsQj6GrOPFKAj3eR4uK2KRLDFvQUA/viewform?usp=header"
-         target="_blank" rel="noopener">
-        Share Your Ideas →
-      </a>
+  <section class="panel">
+    <h2>APC and President Tinubu</h2>
+    <div class="portrait">
+      <img class="party-logo"
+        src="https://apc.com.ng/wp-content/uploads/2023/01/APC-Logo.png"
+        alt="APC logo"
+        loading="lazy"
+        onerror="this.style.display='none'">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Bola_A_Tinubu_presidential_portrait_2023.jpg/300px-Bola_A_Tinubu_presidential_portrait_2023.jpg"
+        alt="Portrait of President Bola Ahmed Tinubu"
+        loading="lazy"
+        onerror="this.style.display='none'">
+      <div>
+        <h3>All Progressives Congress (APC)</h3>
+        <p>President Bola Ahmed Tinubu — President of the Federal Republic of Nigeria.</p>
+        <p><small>Official party information: <a href="https://www.apc.com.ng/" target="_blank" rel="noopener noreferrer">APC website</a>.</small></p>
+      </div>
     </div>
+  </section>
 
-    <div class="card">
-      <h3>Membership Records</h3>
-      <p>
-        Member records must remain accessible only to
-        authorised administrators. Do not publish
-        personal information publicly.
-      </p>
-      <a href="https://docs.google.com/spreadsheets/d/1ALmDTK8_1Q4_1WoQH7qlkeAOJP-MEgxtPT9QGWUPpM4/edit?usp=drivesdk"
-         target="_blank" rel="noopener">
-        Open Ward 5 Spreadsheet →
-      </a>
+  <section class="panel" id="announcements">
+    <h2>📣 Ward 5 Announcements</h2>
+    <div class="notice">
+      <strong>Welcome to the Ward 5 Platform</strong><br>
+      The website is available for registration and community
+      participation. Specific meeting dates and activities should
+      be published here after confirmation by the coordinators.
     </div>
+    <p><small>Administrators should update this section with dated,
+    verified announcements before circulating event details.</small></p>
+  </section>
 
-    <div class="card">
-      <h3>Announcements</h3>
-      <p>
-        Find verified meeting notices, community activities
-        and important updates published by authorised
-        Ward 5 administrators.
-      </p>
-      <a href="#announcements">View Announcements →</a>
-    </div>
-
-    <div class="card">
-      <h3>Good Governance Challenge</h3>
-      <p>
-        Participate in constructive activities that
-        encourage accountability, community service
-        and peaceful civic engagement.
-      </p>
-      <a href="#challenge">Learn How to Participate →</a>
-    </div>
-
-    <div class="card">
-      <h3>Ward 5 Dashboard</h3>
-      <p>
-        View verified community progress summaries.
-        Live membership statistics will be added
-        after the dashboard is connected.
-      </p>
-      <a href="#dashboard">View Dashboard Information →</a>
-    </div>
-
-  </div>
-
-  <div class="notice">
-    <strong>Privacy and safety:</strong>
-    Registration is voluntary. Personal details should
-    be handled responsibly. Only authorised administrators
-    should access the membership spreadsheet.
-  </div>
-
-  <section id="challenge">
-    <h2 class="section-title">How to Participate</h2>
-
+  <section class="panel" id="participate">
+    <h2>How to Participate</h2>
     <div class="steps">
       <div class="step">
         <strong>1. Register</strong>
-        Complete the official Ward 5 registration form
-        and check your details before submitting.
+        Complete the membership form and check your details before submitting.
       </div>
+      <div class="step">
+        <strong>2. Share Ideas</strong>
+        Suggest practical ways to improve community life.
+      </div>
+      <div class="step">
+        <strong>3. Stay Informed</strong>
+        Read announcements and verify important information with coordinators.
+      </div>
+    </div>
+  </section>
 
-      <div class="step
+  <section class="panel" id="dashboard">
+    <h2>Ward 5 Dashboard</h2>
+    <p>This section is reserved for verified public progress summaries.
+       No membership figures are displayed until a secure dashboard is configured.</p>
+    <div class="stats">
+      <div class="stat"><strong>Registration</strong>Form available</div>
+      <div class="stat"><strong>Announcements</strong>Verified updates</div>
+      <div class="stat"><strong>Privacy</strong>Records restricted</div>
+    </div>
+  </section>
+
+  <section class="notice" id="privacy">
+    <strong>Privacy and safety:</strong>
+    Registration is voluntary. Do not publish passwords, bank details
+    or sensitive personal information on this website. The membership
+    spreadsheet is not linked here and should remain accessible only
+    to authorised administrators.
+  </section>
+</main>
+
+<footer>
+  <p><strong>ARISE FOR GOOD GOVERNANCE — WARD 5</strong></p>
+  <p>Calabar Municipality, Cross River State, Nigeria</p>
+  <p>Community Service • Peaceful Participation • Accountability</p>
+</footer>
+</body>
+</html>@
