@@ -736,6 +736,19 @@ footer .small {
 <script>
 document.getElementById("year").textContent =
   new Date().getFullYear();
+  const puSearch = document.getElementById("puSearch");
+
+if (puSearch) {
+  puSearch.addEventListener("input", function () {
+    const query = this.value.toLowerCase().trim();
+
+    document.querySelectorAll("#puTable tbody tr").forEach(function (row) {
+      row.style.display = row.textContent.toLowerCase().includes(query)
+        ? ""
+        : "none";
+    });
+  });
+}
 </script>
 
 </body>
