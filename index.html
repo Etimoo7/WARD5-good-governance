@@ -750,6 +750,99 @@ if (puSearch) {
   });
 }
 </script>
+<!-- WARD 5 MEMBERSHIP DASHBOARD -->
+<section id="membership-dashboard" style="padding:25px 15px;max-width:1000px;margin:auto;font-family:Arial,sans-serif;">
+  <h2 style="text-align:center;color:#176b3a;">📊 Ward 5 Membership Dashboard</h2>
+  <p style="text-align:center;">ARISE FOR GOOD GOVERNANCE</p>
 
+  <div style="background:#f0f8f2;padding:22px;border-radius:12px;text-align:center;margin:20px 0;">
+    <h3>Total Registered Members</h3>
+    <div id="total-members" style="font-size:42px;font-weight:bold;color:#176b3a;">Loading...</div>
+    <p>Membership registration statistics</p>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSduGTTJPYvk8HDVWShqNGsQj6GrOPFKAj3eR4uK2KRLDFvQUA/viewform?usp=header"
+       target="_blank" rel="noopener noreferrer"
+       style="display:inline-block;background:#176b3a;color:white;padding:12px 20px;border-radius:6px;text-decoration:none;">
+       Register as a Member
+    </a>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:15px;">
+    <div style="border:1px solid #ddd;padding:15px;border-radius:10px;">
+      <h3>🏘️ Members by Ward</h3>
+      <div id="ward-stats">Loading...</div>
+    </div>
+
+    <div style="border:1px solid #ddd;padding:15px;border-radius:10px;">
+      <h3>🗺️ Members by LGA</h3>
+      <div id="lga-stats">Loading...</div>
+    </div>
+
+    <div style="border:1px solid #ddd;padding:15px;border-radius:10px;">
+      <h3>📍 Members by Polling Unit</h3>
+      <div id="pu-stats">Loading...</div>
+    </div>
+  </div>
+
+  <p id="dashboard-status" style="text-align:center;color:#666;margin-top:20px;">
+    Connecting to membership records...
+  </p>
+</section>
+
+<script>
+(async function loadWard5Dashboard() {
+  const apiUrl = "https://script.google.com/macros/s/AKfycbzxB26fAr1z4dj93mDnjISJ5o-AfcHJLF9KCnQsKOuZcnOSdv3szldIISE7BZsMzz3D/exec";
+
+  const totalElement = document.getElementById("total-members");
+  const wardElement = document.getElementById("ward-stats");
+  const lgaElement = document.getElementById("lga-stats");
+  const puElement = document.getElementById("pu-stats");
+  const statusElement = document.getElementById("dashboard-status");
+
+  function showCounts(element, counts) {
+    element.replaceChildren();
+
+    const entries = Object.entries(counts || {})
+      .sort((a, b) => b[1] - a[1]);
+
+    if (!entries.length) {
+      element.textContent = "No records available.";
+      return;
+    }
+
+    entries.forEach(([label, count]) => {
+      const row = document.createElement("p");
+      row.style.cssText = "display:flex;justify-content:space-between;gap:12px;border-bottom:1px solid #eee;padding:6px 0;margin:0;";
+      const name = document.createElement("span");
+      name.textContent = label;
+      const number = document.createElement("strong");
+      number.textContent = count;
+      row.append(name, number);
+      element.appendChild(row);
+    });
+  }
+
+  try {
+    const response = await fetch(apiUrl);
+    if (!response.ok) throw new Error("Dashboard service is unavailable.");
+
+    const data = await response.json();
+    if (!data.success) throw new Error(data.message || "Unable to load statistics.");
+
+    totalElement.textContent = data.totalMembers ?? 0;
+    showCounts(wardElement, data.byWard);
+    showCounts(lgaElement, data.byLGA);
+    showCounts(puElement, data.byPollingUnit);
+
+    statusElement.textContent = "Statistics updated successfully.";
+  } catch (error) {
+    totalElement.textContent = "Unavailable";
+    wardElement.textContent = "Unable to load statistics.";
+    lgaElement.textContent = "Unable to load statistics.";
+    puElement.textContent = "Unable to load statistics.";
+    statusElement.textContent = "Could not connect. Check the API deployment and try again.";
+    console.error("Ward 5 dashboard error:", error);
+  }
+})();
+</script>
 </body>
 </html>
